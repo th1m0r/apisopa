@@ -2,7 +2,7 @@ package br.org.sopa.domain;
 
 public enum StatusPessoa {
 
-	CADASTRADO("Cadastrado"), APTO("Apto"), NAO_CADASTRADO("Não Cadastrado");
+	C("Cadastrado"), A("Apto"), N("Não Cadastrado");
 
 	private final String descricao;
 

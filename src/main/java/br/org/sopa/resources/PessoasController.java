@@ -36,6 +36,12 @@ public class PessoasController {
 	public ResponseEntity<List<Pessoa>> listar() {
 		return ResponseEntity.ok().body(pessoaService.listar());
 	}
+	
+	@GetMapping(value = "/{id}")
+	@ResponseStatus(value = HttpStatus.OK)
+	public ResponseEntity<Pessoa> pesquisar(@PathVariable("id") Long id) {
+		return ResponseEntity.ok().body(pessoaService.pesquisar(id));
+	}
 
 	@PostMapping
 	@ResponseStatus(value = HttpStatus.CREATED)

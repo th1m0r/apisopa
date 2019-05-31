@@ -20,7 +20,7 @@ public class PessoaService {
 
 	@Autowired
 	private Pessoas pessoas;
-	
+
 	@Autowired
 	private Frequencias frequencias;
 
@@ -38,7 +38,9 @@ public class PessoaService {
 
 	public Pessoa salvar(Pessoa pessoa) {
 		pessoa.setId(null);
-		pessoa.setStatus(StatusPessoa.NAO_CADASTRADO);
+		if (pessoa.getStatus() == null) {
+			pessoa.setStatus(StatusPessoa.N);
+		}
 		return pessoas.save(pessoa);
 	}
 
@@ -73,7 +75,7 @@ public class PessoaService {
 	}
 
 	public void salvarFrequencia(List<Frequencia> listaFrequencia) {
-		System.out.println(frequencias.saveAll(listaFrequencia));				
+		System.out.println(frequencias.saveAll(listaFrequencia));
 	}
 
 }
