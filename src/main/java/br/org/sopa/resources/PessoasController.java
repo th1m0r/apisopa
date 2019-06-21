@@ -7,8 +7,8 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,26 +25,26 @@ import br.org.sopa.domain.Pessoa;
 import br.org.sopa.service.PessoaService;
 
 @RestController
-@RequestMapping(value = "/pessoas", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+@RequestMapping(value = "/pessoas")
 public class PessoasController {
 
 	@Autowired
 	private PessoaService pessoaService;
 
 	@GetMapping
-	@ResponseStatus(value = HttpStatus.OK)
+	@CrossOrigin
 	public ResponseEntity<List<Pessoa>> listar() {
 		return ResponseEntity.ok().body(pessoaService.listar());
 	}
-	
+
 	@GetMapping(value = "/{id}")
-	@ResponseStatus(value = HttpStatus.OK)
+	@CrossOrigin
 	public ResponseEntity<Pessoa> pesquisar(@PathVariable("id") Long id) {
 		return ResponseEntity.ok().body(pessoaService.pesquisar(id));
 	}
 
 	@PostMapping
-	@ResponseStatus(value = HttpStatus.CREATED)
+	@CrossOrigin
 	public ResponseEntity<Void> salvar(@Valid @RequestBody Pessoa pessoa) {
 		pessoa = pessoaService.salvar(pessoa);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(pessoa.getId()).toUri();
@@ -53,6 +53,7 @@ public class PessoasController {
 
 	@PutMapping(value = "/{id}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+	@CrossOrigin
 	public ResponseEntity<Void> alterar(@Valid Pessoa pessoa, @PathVariable("id") Long id) {
 		pessoa.setId(id);
 		pessoaService.alterar(pessoa);
@@ -61,6 +62,7 @@ public class PessoasController {
 
 	@DeleteMapping(value = "/{id}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+	@CrossOrigin
 	public ResponseEntity<Void> excluir(@PathVariable("id") Long id) {
 		pessoaService.excluir(id);
 		return null;
@@ -69,6 +71,7 @@ public class PessoasController {
 	@PostMapping
 	@ResponseStatus(value = HttpStatus.CREATED)
 	@RequestMapping(value = "/frequencia")
+	@CrossOrigin
 	public ResponseEntity<Void> savarFrequencia(@RequestBody List<Frequencia> listaFrequencia) {
 		pessoaService.salvarFrequencia(listaFrequencia);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().buildAndExpand().toUri();
@@ -78,15 +81,16 @@ public class PessoasController {
 	@GetMapping
 	@ResponseStatus(value = HttpStatus.OK)
 	@RequestMapping(value = "/frequencia/{idPonto}")
+	@CrossOrigin
 	public ResponseEntity<List<Frequencia>> montarFrequencia(@PathVariable("idPonto") Long idPonto) {
 		return ResponseEntity.ok().body(pessoaService.montarFrequencia(idPonto));
 	}
-	
+
 	@GetMapping
 	@ResponseStatus(value = HttpStatus.OK)
 	@RequestMapping(value = "/aniversariantes")
+	@CrossOrigin
 	public ResponseEntity<List<Pessoa>> listarAniversariantes() {
 		return ResponseEntity.ok().body(pessoaService.listarAniversariantes());
-	} 
-
+	}
 }
