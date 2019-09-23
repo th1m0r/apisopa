@@ -149,3 +149,8 @@
 2019-09-23 19:00:26.422  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
 2019-09-23 19:00:26.422  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 0.586 seconds (JVM running for 14833.787)
 2019-09-23 19:00:26.423  INFO 18624 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-09-23 19:29:11.930  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-09-23 19:29:11.932  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-23 19:29:11.933  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-23 19:29:11.933  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2019-09-23 19:29:11.938  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
