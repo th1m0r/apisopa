@@ -18,15 +18,15 @@ public class Frequencia implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Long id;
-	private Pessoa pessoa;
+	private Assistido assistido;
 	private boolean presente;
 	private LocalDate dataDistribuicao;
 
 	public Frequencia() {
 	}
 
-	public Frequencia(Pessoa pessoa) {
-		this.pessoa = pessoa;
+	public Frequencia(Assistido assistido) {
+		this.assistido = assistido;
 		dataDistribuicao = LocalDate.now();
 		presente = false;
 	}
@@ -42,13 +42,13 @@ public class Frequencia implements Serializable {
 	}
 
 	@ManyToOne
-	@JoinColumn(name = "id_pessoa", referencedColumnName = "id", nullable = true)
-	public Pessoa getPessoa() {
-		return pessoa;
+	@JoinColumn(name = "id_assistido", referencedColumnName = "id", nullable = true)
+	public Assistido getAssistido() {
+		return assistido;
 	}
 
-	public void setPessoa(Pessoa pessoa) {
-		this.pessoa = pessoa;
+	public void setAssistido(Assistido assistido) {
+		this.assistido = assistido;
 	}
 
 	public boolean isPresente() {
@@ -96,7 +96,7 @@ public class Frequencia implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Frequencia [pessoa=" + pessoa.getNome() + ", presente=" + presente + ", dataSopa=" + dataDistribuicao + "]";
+		return "Frequencia [assistido=" + assistido.getNome() + ", presente=" + presente + ", dataSopa=" + dataDistribuicao + "]";
 	}
 
 }

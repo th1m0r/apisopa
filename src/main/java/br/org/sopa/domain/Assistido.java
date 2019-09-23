@@ -21,7 +21,7 @@ import javax.validation.constraints.Size;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-public class Pessoa implements Serializable {
+public class Assistido implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Long id;
@@ -29,13 +29,13 @@ public class Pessoa implements Serializable {
 	private LocalDate dataNascimento;
 	private Ponto ponto;
 	private LocalDate dataCadastro;
-	private StatusPessoa status;
+	private StatusPessoa situacao;
 
-	public Pessoa() {
+	public Assistido() {
 		dataCadastro = LocalDate.now();
 	}
 
-	public Pessoa(Long id) {
+	public Assistido(Long id) {
 		this.id = id;
 	}
 
@@ -60,7 +60,6 @@ public class Pessoa implements Serializable {
 		this.nome = nome;
 	}
 
-	@JsonFormat(pattern = "dd/MM/yyyy")
 	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
@@ -90,12 +89,12 @@ public class Pessoa implements Serializable {
 	}
 
 	@Enumerated(EnumType.STRING)
-	public StatusPessoa getStatus() {
-		return status;
+	public StatusPessoa getSituacao() {
+		return situacao;
 	}
 
-	public void setStatus(StatusPessoa status) {
-		this.status = status;
+	public void setSituacao(StatusPessoa situacao) {
+		this.situacao = situacao;
 	}
 
 	@Override
@@ -114,7 +113,7 @@ public class Pessoa implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Pessoa other = (Pessoa) obj;
+		Assistido other = (Assistido) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

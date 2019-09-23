@@ -23,7 +23,7 @@ public class Ponto implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private Long id;
 	private String nome;
-	private List<Pessoa> pessoas;
+	private List<Assistido> assistidos;
 
 	public Ponto() {
 	}
@@ -54,12 +54,12 @@ public class Ponto implements Serializable {
 
 	@JsonIgnore
 	@OneToMany(mappedBy = "ponto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	public List<Pessoa> getPessoas() {
-		return pessoas;
+	public List<Assistido> getAssistidos() {
+		return assistidos;
 	}
 
-	public void setPessoas(List<Pessoa> pessoas) {
-		this.pessoas = pessoas;
+	public void setAssistidos(List<Assistido> assistidos) {
+		this.assistidos = assistidos;
 	}
 
 	@Override
