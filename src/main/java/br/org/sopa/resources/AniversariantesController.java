@@ -24,7 +24,7 @@ public class AniversariantesController {
 	@GetMapping
 	@ResponseStatus(value = HttpStatus.OK)
 	@CrossOrigin
-	public ResponseEntity<List<Assistido>> listarAniversariantes(int mes) {
+	public ResponseEntity<List<Assistido>> listarAniversariantes(Integer mes) {
 		return ResponseEntity.ok().body(pessoaService.listarAniversariantes(mes));
 	}
 
