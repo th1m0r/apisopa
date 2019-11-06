@@ -8,6 +8,7 @@ import javax.persistence.PersistenceContext;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.MatchMode;
+import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -29,6 +30,7 @@ public class AssistidosImpl implements AssistidosQueries {
 		Criteria criteria = manager.unwrap(Session.class).createCriteria(Assistido.class);
 
 		adicionarFiltro(filtro, criteria);
+		criteria.addOrder(Order.asc("nome"));
 
 		return criteria.list();
 	}
