@@ -345,3 +345,8 @@ Consider defining a bean of type 'br.org.sopa.service.DashboardService' in your 
 2019-11-05 21:01:19.190  INFO 11944 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-11-05 21:01:19.191  INFO 11944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-11-05 21:01:19.197  INFO 11944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2019-11-05 21:12:07.226  INFO 11944 --- [RMI TCP Connection(4)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-11-05 21:12:07.231  INFO 11944 --- [RMI TCP Connection(4)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 21:12:07.233  INFO 11944 --- [RMI TCP Connection(4)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 21:12:07.236  INFO 11944 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-05 21:12:07.240  INFO 11944 --- [RMI TCP Connection(4)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
