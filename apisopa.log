@@ -1,156 +1,347 @@
-2019-09-23 18:55:00.239  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 18624 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
-2019-09-23 18:55:00.240  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
-2019-09-23 18:55:00.506  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-23 18:55:00.521  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 3 repository interfaces.
-2019-09-23 18:55:00.562  INFO 18624 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cf397b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-23 18:55:00.640  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6367 (http)
-2019-09-23 18:55:00.641  INFO 18624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-23 18:55:00.641  INFO 18624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-09-23 18:55:00.652  INFO 18624 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
-2019-09-23 18:55:00.652  INFO 18624 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 411 ms
-2019-09-23 18:55:00.685  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
-2019-09-23 18:55:00.689  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
-2019-09-23 18:55:00.689  INFO 18624 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
-2019-09-23 18:55:00.707  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.007s)
-2019-09-23 18:55:00.710  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
-2019-09-23 18:55:00.710  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
-2019-09-23 18:55:00.731  INFO 18624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-11-05 19:50:23.432  INFO 1412 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 1412 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 19:50:23.439  INFO 1412 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 19:50:23.477  INFO 1412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-05 19:50:23.478  INFO 1412 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-05 19:50:24.186  INFO 1412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 19:50:24.275  INFO 1412 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 3 repository interfaces.
+2019-11-05 19:50:24.636  INFO 1412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9087db0d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:50:24.669  INFO 1412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$2935a347] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:50:24.673  INFO 1412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:50:24.675  INFO 1412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@bf57cc2' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:50:24.678  INFO 1412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$4e0a45f9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:50:24.680  INFO 1412 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:50:25.021  INFO 1412 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 19:50:25.047  INFO 1412 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 19:50:25.048  INFO 1412 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 19:50:25.161  INFO 1412 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 19:50:25.161  INFO 1412 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1683 ms
+2019-11-05 19:50:25.293  INFO 1412 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-11-05 19:50:25.295  INFO 1412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-05 19:50:25.519  INFO 1412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-05 19:50:25.523  INFO 1412 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 19:50:26.093  INFO 1412 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.322s)
+2019-11-05 19:50:26.116  INFO 1412 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 19:50:26.116  INFO 1412 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 19:50:26.242  INFO 1412 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-23 18:55:00.740  INFO 18624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-23 18:55:00.774  INFO 18624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 18:55:00.815  INFO 18624 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-23 18:55:00.936  INFO 18624 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-23 18:55:00.942  WARN 18624 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-23 18:55:00.999  INFO 18624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-23 18:55:01.013  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6367 (http) with context path '/sopa/api'
-2019-09-23 18:55:01.014  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 0.807 seconds (JVM running for 14508.379)
-2019-09-23 18:55:01.015  INFO 18624 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-09-23 18:55:34.018  INFO 18624 --- [Thread-60] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-23 18:55:34.020  INFO 18624 --- [Thread-60] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 18:55:34.021  INFO 18624 --- [Thread-60] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
-2019-09-23 18:55:34.025  INFO 18624 --- [Thread-60] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
-2019-09-23 18:55:34.456  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 18624 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
-2019-09-23 18:55:34.457  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
-2019-09-23 18:55:34.626  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-23 18:55:34.627  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1ms. Found 0 repository interfaces.
-2019-09-23 18:55:34.662  INFO 18624 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cf397b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-23 18:55:34.746  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6367 (http)
-2019-09-23 18:55:34.747  INFO 18624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-23 18:55:34.747  INFO 18624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-09-23 18:55:34.761  INFO 18624 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
-2019-09-23 18:55:34.762  INFO 18624 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 303 ms
-2019-09-23 18:55:34.794  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
-2019-09-23 18:55:34.799  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
-2019-09-23 18:55:34.799  INFO 18624 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
-2019-09-23 18:55:34.805  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.003s)
-2019-09-23 18:55:34.808  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
-2019-09-23 18:55:34.808  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
-2019-09-23 18:55:34.825  INFO 18624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-11-05 19:50:26.308  INFO 1412 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-11-05 19:50:26.309  INFO 1412 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-05 19:50:26.444  INFO 1412 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-05 19:50:26.587  INFO 1412 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 19:50:27.270  INFO 1412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:50:27.745  INFO 1412 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 19:50:27.849  WARN 1412 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'dashboardController': Unsatisfied dependency expressed through field 'dashboardService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'br.org.sopa.service.DashboardService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-11-05 19:50:27.851  INFO 1412 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:50:27.854  INFO 1412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-05 19:50:27.857  INFO 1412 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-05 19:50:27.859  INFO 1412 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-11-05 19:50:27.869  INFO 1412 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-11-05 19:50:28.028 ERROR 1412 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field dashboardService in br.org.sopa.resources.DashboardController required a bean of type 'br.org.sopa.service.DashboardService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'br.org.sopa.service.DashboardService' in your configuration.
+
+2019-11-05 19:51:06.147  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 13376 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 19:51:06.150  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 19:51:06.186  INFO 13376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-05 19:51:06.186  INFO 13376 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-05 19:51:06.829  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 19:51:06.908  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 3 repository interfaces.
+2019-11-05 19:51:07.264  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4034aa90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:07.297  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d8e272ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:07.302  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:07.305  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@43aeb604' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:07.307  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fdb7157c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:07.311  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:07.668  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 19:51:07.696  INFO 13376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 19:51:07.696  INFO 13376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 19:51:07.824  INFO 13376 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 19:51:07.825  INFO 13376 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1639 ms
+2019-11-05 19:51:07.982  INFO 13376 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-11-05 19:51:07.984  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-05 19:51:08.245  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-05 19:51:08.248  INFO 13376 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 19:51:08.310  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.028s)
+2019-11-05 19:51:08.321  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 19:51:08.322  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 19:51:08.462  INFO 13376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-23 18:55:34.828  INFO 18624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-23 18:55:34.835  INFO 18624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 18:55:34.885  INFO 18624 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-23 18:55:34.889  WARN 18624 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-23 18:55:34.960  INFO 18624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-23 18:55:34.976  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6367 (http) with context path '/sopa/api'
-2019-09-23 18:55:34.976  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 0.557 seconds (JVM running for 14542.341)
-2019-09-23 18:55:34.978  INFO 18624 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-09-23 18:55:38.379  INFO 18624 --- [Thread-66] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-23 18:55:38.380  INFO 18624 --- [Thread-66] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 18:55:38.380  INFO 18624 --- [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
-2019-09-23 18:55:38.385  INFO 18624 --- [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
-2019-09-23 18:55:38.714  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 18624 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
-2019-09-23 18:55:38.715  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
-2019-09-23 18:55:38.889  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-23 18:55:38.906  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 3 repository interfaces.
-2019-09-23 18:55:38.942  INFO 18624 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cf397b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-23 18:55:39.016  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 6367 (http)
-2019-09-23 18:55:39.016  INFO 18624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-23 18:55:39.016  INFO 18624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-09-23 18:55:39.027  INFO 18624 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
-2019-09-23 18:55:39.027  INFO 18624 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 311 ms
-2019-09-23 18:55:39.058  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
-2019-09-23 18:55:39.064  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
-2019-09-23 18:55:39.064  INFO 18624 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
-2019-09-23 18:55:39.071  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.003s)
-2019-09-23 18:55:39.074  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
-2019-09-23 18:55:39.075  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
-2019-09-23 18:55:39.097  INFO 18624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-11-05 19:51:08.525  INFO 13376 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-11-05 19:51:08.527  INFO 13376 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-05 19:51:08.653  INFO 13376 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-05 19:51:08.798  INFO 13376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 19:51:09.486  INFO 13376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:51:09.893  INFO 13376 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 19:51:10.135  INFO 13376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2aa6769d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f3d09e4, org.springframework.security.web.header.HeaderWriterFilter@2d6f2e05, org.springframework.security.web.authentication.logout.LogoutFilter@22260f4d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a1b0c8a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41b44514, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@753551ee, org.springframework.security.web.session.SessionManagementFilter@1f21fdd8, org.springframework.security.web.access.ExceptionTranslationFilter@4e799ada, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4393c6d9]
+2019-11-05 19:51:10.353  INFO 13376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:51:10.398  WARN 13376 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-05 19:51:10.626  INFO 13376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-05 19:51:10.943  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
+2019-11-05 19:51:10.946  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 5.061 seconds (JVM running for 5.761)
+2019-11-05 19:51:20.654  INFO 13376 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 19:51:20.655  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-05 19:51:20.662  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-11-05 19:51:50.443  INFO 13376 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:51:50.444  INFO 13376 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:51:50.447  INFO 13376 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-05 19:51:50.450  INFO 13376 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-11-05 19:51:50.887  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 13376 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 19:51:50.887  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 19:51:51.131  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 19:51:51.157  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 3 repository interfaces.
+2019-11-05 19:51:51.226  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4034aa90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:51.228  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d8e272ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:51.229  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:51.229  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@280000d5' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:51.231  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fdb7157c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:51.232  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:51:51.336  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 19:51:51.337  INFO 13376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 19:51:51.337  INFO 13376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 19:51:51.351  INFO 13376 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 19:51:51.351  INFO 13376 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 461 ms
+2019-11-05 19:51:51.408  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2019-11-05 19:51:51.413  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2019-11-05 19:51:51.414  INFO 13376 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 19:51:51.425  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.005s)
+2019-11-05 19:51:51.430  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 19:51:51.430  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 19:51:51.460  INFO 13376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-23 18:55:39.107  INFO 18624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-23 18:55:39.140  INFO 18624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 18:55:39.181  INFO 18624 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-23 18:55:39.316  INFO 18624 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-23 18:55:39.326  WARN 18624 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-23 18:55:39.430  INFO 18624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-23 18:55:39.454  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 6367 (http) with context path '/sopa/api'
-2019-09-23 18:55:39.454  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 0.757 seconds (JVM running for 14546.819)
-2019-09-23 18:55:39.458  INFO 18624 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-09-23 18:55:46.319  INFO 21508 --- [main] br.org.sopa.SopaApplicationTests         : Starting SopaApplicationTests on th1m0r-i15-w10 with PID 21508 (started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
-2019-09-23 18:55:46.321  INFO 21508 --- [main] br.org.sopa.SopaApplicationTests         : No active profile set, falling back to default profiles: default
-2019-09-23 18:55:47.481  INFO 21508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-23 18:55:47.612  INFO 21508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118ms. Found 3 repository interfaces.
-2019-09-23 18:55:48.135  INFO 21508 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bb8ee7e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-23 18:55:48.376  INFO 21508 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
-2019-09-23 18:55:48.389  INFO 21508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-09-23 18:55:48.777  INFO 21508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-09-23 18:55:48.783  INFO 21508 --- [main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
-2019-09-23 18:55:48.863  INFO 21508 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.030s)
-2019-09-23 18:55:48.877  INFO 21508 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
-2019-09-23 18:55:48.878  INFO 21508 --- [main] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
-2019-09-23 18:55:49.116  INFO 21508 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-11-05 19:51:51.474  INFO 13376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 19:51:51.523  INFO 13376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:51:51.627  INFO 13376 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 19:51:51.693  INFO 13376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45e7665f, org.springframework.security.web.context.SecurityContextPersistenceFilter@66bb5dc6, org.springframework.security.web.header.HeaderWriterFilter@2526e46, org.springframework.security.web.authentication.logout.LogoutFilter@161c3c64, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d7c143, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@17e6bf81, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@57db97fc, org.springframework.security.web.session.SessionManagementFilter@42e86263, org.springframework.security.web.access.ExceptionTranslationFilter@176efc5e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47204dd1]
+2019-11-05 19:51:51.778  INFO 13376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:51:51.789  WARN 13376 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-05 19:51:51.901  INFO 13376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-05 19:51:51.924  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
+2019-11-05 19:51:51.925  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 1.072 seconds (JVM running for 46.74)
+2019-11-05 19:51:51.928  INFO 13376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-05 19:51:58.124  INFO 13376 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 19:51:58.126  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-05 19:51:58.133  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-11-05 19:56:13.920  INFO 13376 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:56:13.923  INFO 13376 --- [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:56:13.924  INFO 13376 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2019-11-05 19:56:13.930  INFO 13376 --- [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2019-11-05 19:56:14.358  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 13376 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 19:56:14.359  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 19:56:14.615  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 19:56:14.645  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 3 repository interfaces.
+2019-11-05 19:56:14.715  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4034aa90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:14.718  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d8e272ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:14.720  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:14.720  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@4f2788c5' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:14.722  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fdb7157c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:14.723  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:14.833  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 19:56:14.833  INFO 13376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 19:56:14.833  INFO 13376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 19:56:14.860  INFO 13376 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 19:56:14.860  INFO 13376 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 498 ms
+2019-11-05 19:56:14.927  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2019-11-05 19:56:14.934  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2019-11-05 19:56:14.935  INFO 13376 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 19:56:14.950  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.007s)
+2019-11-05 19:56:14.956  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 19:56:14.956  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 19:56:14.993  INFO 13376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-23 18:55:49.200  INFO 21508 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
-2019-09-23 18:55:49.202  INFO 21508 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-09-23 18:55:49.394  INFO 21508 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-09-23 18:55:49.924  INFO 21508 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-23 18:55:50.875  INFO 21508 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 18:55:51.466  INFO 21508 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-23 18:55:53.053  INFO 21508 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-23 18:55:53.137  WARN 21508 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-23 18:55:53.738  INFO 21508 --- [main] br.org.sopa.SopaApplicationTests         : Started SopaApplicationTests in 7.812 seconds (JVM running for 8.775)
-2019-09-23 18:55:53.898  INFO 21508 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-23 18:55:53.901  INFO 21508 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 18:55:53.905  INFO 21508 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-09-23 18:55:53.912  INFO 21508 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-09-23 19:00:25.490  INFO 18624 --- [Thread-72] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-23 19:00:25.492  INFO 18624 --- [Thread-72] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 19:00:25.493  INFO 18624 --- [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
-2019-09-23 19:00:25.498  INFO 18624 --- [Thread-72] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
-2019-09-23 19:00:25.852  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 18624 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
-2019-09-23 19:00:25.853  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
-2019-09-23 19:00:26.023  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-09-23 19:00:26.038  INFO 18624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 3 repository interfaces.
-2019-09-23 19:00:26.076  INFO 18624 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5cf397b7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-09-23 19:00:26.144  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-09-23 19:00:26.145  INFO 18624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-09-23 19:00:26.145  INFO 18624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
-2019-09-23 19:00:26.155  INFO 18624 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
-2019-09-23 19:00:26.155  INFO 18624 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 301 ms
-2019-09-23 19:00:26.183  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
-2019-09-23 19:00:26.187  INFO 18624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
-2019-09-23 19:00:26.187  INFO 18624 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
-2019-09-23 19:00:26.192  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.002s)
-2019-09-23 19:00:26.194  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
-2019-09-23 19:00:26.194  INFO 18624 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
-2019-09-23 19:00:26.213  INFO 18624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-11-05 19:56:15.007  INFO 13376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 19:56:15.093  INFO 13376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:56:15.188  INFO 13376 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 19:56:15.263  INFO 13376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53b63404, org.springframework.security.web.context.SecurityContextPersistenceFilter@124f6baa, org.springframework.security.web.header.HeaderWriterFilter@8a88420, org.springframework.security.web.authentication.logout.LogoutFilter@6e102180, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@78346b8a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@34716928, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4d446cd3, org.springframework.security.web.session.SessionManagementFilter@51d17d43, org.springframework.security.web.access.ExceptionTranslationFilter@3c0ac37a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cac7dcf]
+2019-11-05 19:56:15.344  INFO 13376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:56:15.355  WARN 13376 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-05 19:56:15.463  INFO 13376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-05 19:56:15.483  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
+2019-11-05 19:56:15.483  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 1.154 seconds (JVM running for 310.298)
+2019-11-05 19:56:15.485  INFO 13376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-05 19:56:35.069  INFO 13376 --- [Thread-19] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:56:35.071  INFO 13376 --- [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:56:35.071  INFO 13376 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2019-11-05 19:56:35.076  INFO 13376 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2019-11-05 19:56:35.525  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 13376 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 19:56:35.525  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 19:56:35.842  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 19:56:35.883  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 3 repository interfaces.
+2019-11-05 19:56:35.980  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4034aa90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:35.982  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d8e272ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:35.984  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:35.984  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@78b01714' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:35.986  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fdb7157c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:35.987  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:56:36.111  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 19:56:36.112  INFO 13376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 19:56:36.112  INFO 13376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 19:56:36.129  INFO 13376 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 19:56:36.129  INFO 13376 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 600 ms
+2019-11-05 19:56:36.189  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2019-11-05 19:56:36.195  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2019-11-05 19:56:36.196  INFO 13376 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 19:56:36.304  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.103s)
+2019-11-05 19:56:36.310  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 19:56:36.310  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 19:56:36.346  INFO 13376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-09-23 19:00:26.222  INFO 18624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-09-23 19:00:26.252  INFO 18624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 19:00:26.280  INFO 18624 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-09-23 19:00:26.349  INFO 18624 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-09-23 19:00:26.354  WARN 18624 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-09-23 19:00:26.407  INFO 18624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2019-09-23 19:00:26.422  INFO 18624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
-2019-09-23 19:00:26.422  INFO 18624 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 0.586 seconds (JVM running for 14833.787)
-2019-09-23 19:00:26.423  INFO 18624 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2019-09-23 19:29:11.930  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2019-09-23 19:29:11.932  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-09-23 19:29:11.933  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-09-23 19:29:11.933  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
-2019-09-23 19:29:11.938  INFO 18624 --- [RMI TCP Connection(233)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2019-11-05 19:56:36.364  INFO 13376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 19:56:36.416  INFO 13376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:56:36.518  INFO 13376 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 19:56:36.622  INFO 13376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e5932da, org.springframework.security.web.context.SecurityContextPersistenceFilter@288cfc01, org.springframework.security.web.header.HeaderWriterFilter@27406fcb, org.springframework.security.web.authentication.logout.LogoutFilter@761a4ad3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f24543, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24e84ca1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2fed9af3, org.springframework.security.web.session.SessionManagementFilter@60764acd, org.springframework.security.web.access.ExceptionTranslationFilter@11473229, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@697015f5]
+2019-11-05 19:56:36.746  INFO 13376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:56:36.762  WARN 13376 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-05 19:56:36.901  INFO 13376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-05 19:56:36.923  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
+2019-11-05 19:56:36.923  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 1.436 seconds (JVM running for 331.738)
+2019-11-05 19:56:36.925  INFO 13376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-05 19:56:46.806  INFO 13376 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 19:56:46.808  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-05 19:56:46.815  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2019-11-05 19:58:55.695  INFO 13376 --- [Thread-25] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:58:55.696  INFO 13376 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:58:55.697  INFO 13376 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2019-11-05 19:58:55.702  INFO 13376 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2019-11-05 19:58:56.286  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 13376 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 19:58:56.286  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 19:58:56.536  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 19:58:56.560  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23ms. Found 3 repository interfaces.
+2019-11-05 19:58:56.607  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4034aa90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:58:56.608  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d8e272ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:58:56.609  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:58:56.610  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@5efa5ee3' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:58:56.611  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fdb7157c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:58:56.612  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 19:58:56.707  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 19:58:56.709  INFO 13376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 19:58:56.709  INFO 13376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 19:58:56.720  INFO 13376 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 19:58:56.720  INFO 13376 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 431 ms
+2019-11-05 19:58:56.766  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2019-11-05 19:58:56.771  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2019-11-05 19:58:56.771  INFO 13376 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 19:58:56.779  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.004s)
+2019-11-05 19:58:56.785  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 19:58:56.785  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 19:58:56.813  INFO 13376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-05 19:58:56.827  INFO 13376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 19:58:56.885  INFO 13376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 19:58:56.976  INFO 13376 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 19:58:57.033  INFO 13376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@34cdff8, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e5d0b78, org.springframework.security.web.header.HeaderWriterFilter@536cea68, org.springframework.security.web.authentication.logout.LogoutFilter@6d09e183, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@389aaa90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c913841, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63440973, org.springframework.security.web.session.SessionManagementFilter@74b2a971, org.springframework.security.web.access.ExceptionTranslationFilter@4fc5bb8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@11eb41fd]
+2019-11-05 19:58:57.105  INFO 13376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 19:58:57.115  WARN 13376 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-05 19:58:57.205  INFO 13376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-05 19:58:57.224  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
+2019-11-05 19:58:57.224  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 0.981 seconds (JVM running for 472.039)
+2019-11-05 19:58:57.226  INFO 13376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-05 19:59:06.459  INFO 13376 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 19:59:06.460  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-05 19:59:06.464  INFO 13376 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-11-05 20:01:12.002  INFO 13376 --- [Thread-31] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 20:01:12.003  INFO 13376 --- [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 20:01:12.004  INFO 13376 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2019-11-05 20:01:12.009  INFO 13376 --- [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2019-11-05 20:01:12.348  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 13376 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 20:01:12.349  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 20:01:12.569  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 20:01:12.594  INFO 13376 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25ms. Found 3 repository interfaces.
+2019-11-05 20:01:12.640  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4034aa90] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:01:12.641  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$d8e272ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:01:12.642  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:01:12.643  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@59fb4d5' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:01:12.644  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$fdb7157c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:01:12.645  INFO 13376 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:01:12.738  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 20:01:12.738  INFO 13376 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 20:01:12.738  INFO 13376 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 20:01:12.749  INFO 13376 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 20:01:12.749  INFO 13376 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 398 ms
+2019-11-05 20:01:12.796  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2019-11-05 20:01:12.801  INFO 13376 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2019-11-05 20:01:12.801  INFO 13376 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 20:01:12.809  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.003s)
+2019-11-05 20:01:12.813  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 20:01:12.814  INFO 13376 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 20:01:12.839  INFO 13376 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-05 20:01:12.855  INFO 13376 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 20:01:12.894  INFO 13376 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 20:01:12.986  INFO 13376 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 20:01:13.040  INFO 13376 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5abebc3f, org.springframework.security.web.context.SecurityContextPersistenceFilter@6167eced, org.springframework.security.web.header.HeaderWriterFilter@5ffa6e4b, org.springframework.security.web.authentication.logout.LogoutFilter@7be194a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50589a28, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c5c3e5e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7948f767, org.springframework.security.web.session.SessionManagementFilter@5591c50a, org.springframework.security.web.access.ExceptionTranslationFilter@416e1c1d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7ed8f2b]
+2019-11-05 20:01:13.104  INFO 13376 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 20:01:13.113  WARN 13376 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-05 20:01:13.208  INFO 13376 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-05 20:01:13.223  INFO 13376 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
+2019-11-05 20:01:13.223  INFO 13376 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 0.896 seconds (JVM running for 608.038)
+2019-11-05 20:01:13.225  INFO 13376 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-05 20:01:31.805  INFO 13376 --- [RMI TCP Connection(26)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-11-05 20:01:31.809  INFO 13376 --- [RMI TCP Connection(26)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-05 20:01:31.809  INFO 13376 --- [RMI TCP Connection(26)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 20:01:31.809  INFO 13376 --- [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2019-11-05 20:01:31.814  INFO 13376 --- [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2019-11-05 20:57:41.073  INFO 11944 --- [restartedMain] br.org.sopa.SopaApplication              : Starting SopaApplication on th1m0r-i15-w10 with PID 11944 (C:\Users\th1m0r\Java\workspace\apisopa\target\classes started by th1m0r in C:\Users\th1m0r\Java\workspace\apisopa)
+2019-11-05 20:57:41.075  INFO 11944 --- [restartedMain] br.org.sopa.SopaApplication              : No active profile set, falling back to default profiles: default
+2019-11-05 20:57:41.106  INFO 11944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-05 20:57:41.107  INFO 11944 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-05 20:57:41.792  INFO 11944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-05 20:57:41.869  INFO 11944 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69ms. Found 3 repository interfaces.
+2019-11-05 20:57:42.159  INFO 11944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$657a9863] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:57:42.187  INFO 11944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$fe28609d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:57:42.192  INFO 11944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:57:42.194  INFO 11944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@3b4bc97e' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:57:42.195  INFO 11944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$22fd034f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:57:42.197  INFO 11944 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-05 20:57:42.486  INFO 11944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-05 20:57:42.508  INFO 11944 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-05 20:57:42.508  INFO 11944 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.17]
+2019-11-05 20:57:42.601  INFO 11944 --- [restartedMain] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring embedded WebApplicationContext
+2019-11-05 20:57:42.602  INFO 11944 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1495 ms
+2019-11-05 20:57:42.720  INFO 11944 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2019-11-05 20:57:42.722  INFO 11944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-05 20:57:42.900  INFO 11944 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-05 20:57:42.902  INFO 11944 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost:3306/db_sopa (MySQL 5.7)
+2019-11-05 20:57:42.988  INFO 11944 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 1 migration (execution time 00:00.018s)
+2019-11-05 20:57:42.995  INFO 11944 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `db_sopa`: 001
+2019-11-05 20:57:42.995  INFO 11944 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `db_sopa` is up to date. No migration necessary.
+2019-11-05 20:57:43.109  INFO 11944 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-11-05 20:57:43.168  INFO 11944 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.9.Final}
+2019-11-05 20:57:43.169  INFO 11944 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-05 20:57:43.313  INFO 11944 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-05 20:57:43.449  INFO 11944 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-11-05 20:57:43.960  INFO 11944 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-05 20:57:44.263  INFO 11944 --- [restartedMain] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-05 20:57:44.509  INFO 11944 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52bb3b08, org.springframework.security.web.context.SecurityContextPersistenceFilter@44cf25bb, org.springframework.security.web.header.HeaderWriterFilter@40af762c, org.springframework.security.web.authentication.logout.LogoutFilter@2123d7f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@246f9bc3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f222455, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7bfcca01, org.springframework.security.web.session.SessionManagementFilter@bf2972a, org.springframework.security.web.access.ExceptionTranslationFilter@124e5749, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46c3ea2a]
+2019-11-05 20:57:44.654  INFO 11944 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-05 20:57:44.686  WARN 11944 --- [restartedMain] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-05 20:57:45.027  INFO 11944 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-05 20:57:45.063  INFO 11944 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/sopa/api'
+2019-11-05 20:57:45.066  INFO 11944 --- [restartedMain] br.org.sopa.SopaApplication              : Started SopaApplication in 4.209 seconds (JVM running for 4.877)
+2019-11-05 21:01:19.190  INFO 11944 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/sopa/api]      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-05 21:01:19.191  INFO 11944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-05 21:01:19.197  INFO 11944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms

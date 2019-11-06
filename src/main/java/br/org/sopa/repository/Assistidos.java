@@ -13,8 +13,19 @@ import br.org.sopa.repository.helper.AssistidosQueries;
 public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQueries {
 
 	public List<Assistido> findByPontoId(Long id);
-	
+
 	@Query("from Assistido where month(dataNascimento)=?1 and situacao='C' order by ponto,dataNascimento")
 	public List<Assistido> findAniversariantes(int monthValue);
+
+	@Query("select count(a) from Assistido a")
+	public Long numeroAssitidos();
+
+	@Query("select count(a) from Assistido a where month(dataNascimento)=?1 and situacao='C'")
+	public Long countAniversariantes(int monthValue);
+
+	@Query(value = "select count(*) from "
+			+ "(select id_assistido,count(*) as vezes from frequencia group by id_assistido) aptos "
+			+ "where vezes>=5", nativeQuery = true)
+	public Long countAptos();
 
 }

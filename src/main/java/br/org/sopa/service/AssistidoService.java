@@ -26,8 +26,6 @@ public class AssistidoService {
 	private Frequencias frequencias;
 
 	public List<Assistido> listar(AssistidoFiltro assistidoFiltro) {
-		System.out.println(
-				"NOME:\t" + assistidoFiltro.getNome() + "\nPONTO:\t" + assistidoFiltro.getPonto() + "\nSITUACAO:\t" + assistidoFiltro.getSituacao());
 		return pessoas.filtrar(assistidoFiltro);
 	}
 

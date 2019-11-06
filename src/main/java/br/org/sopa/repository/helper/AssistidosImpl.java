@@ -42,7 +42,7 @@ public class AssistidosImpl implements AssistidosQueries {
 			if (filtro.getPonto() != 0) {
 				criteria.add(Restrictions.eq("p.id", filtro.getPonto()));
 			}
-			if (!filtro.getSituacao().equals("0") ) {
+			if (!filtro.getSituacao().equals("0")) {
 				if(filtro.getSituacao().equals("N")) {
 					criteria.add(Restrictions.eq("situacao", StatusPessoa.N));					
 				} else if(filtro.getSituacao().equals("A")) {
