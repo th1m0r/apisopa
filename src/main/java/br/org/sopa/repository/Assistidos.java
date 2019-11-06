@@ -27,5 +27,11 @@ public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQu
 			+ "(select id_assistido,count(*) as vezes from frequencia group by id_assistido) aptos "
 			+ "where vezes>=5", nativeQuery = true)
 	public Long countAptos();
+	
+	@Query("select count(a) from Assistido where situacao='C'")
+	public Long countCadastrados();
+	
+	@Query("select count(a) from Assistido where situacao='N'")
+	public Long countNaoCadastrados();
 
 }

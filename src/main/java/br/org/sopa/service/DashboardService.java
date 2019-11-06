@@ -19,6 +19,8 @@ public class DashboardService {
 		dash.setNumeroAssistidos(assistidos.numeroAssitidos());
 		dash.setAptos(assistidos.countAptos());
 		dash.setAniversariantes(assistidos.countAniversariantes(LocalDate.now().getMonthValue()));
+		dash.setCadastrados(assistidos.countCadastrados());
+		dash.setNaoCadastrados(assistidos.countNaoCadastrados());
 		return dash;
 	}
 
