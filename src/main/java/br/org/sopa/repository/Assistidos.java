@@ -12,7 +12,7 @@ import br.org.sopa.repository.helper.AssistidosQueries;
 @Repository
 public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQueries {
 
-	public List<Assistido> findByPontoId(Long id);
+	public List<Assistido> findByPontoIdOrderByNome(Long id);
 
 	@Query("from Assistido where month(dataNascimento)=?1 and situacao='C' order by ponto,dataNascimento")
 	public List<Assistido> findAniversariantes(int monthValue);

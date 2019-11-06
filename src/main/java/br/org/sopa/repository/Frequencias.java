@@ -13,6 +13,6 @@ public interface Frequencias extends JpaRepository<Frequencia, Long>{
 	
 	public List<Frequencia> findByAssistido(Assistido assistido);
 	
-	public List<Frequencia> findByDataDistribuicaoAndAssistidoPontoId(LocalDate dataDistribuicao, Long id);
+	public List<Frequencia> findByDataDistribuicaoAndAssistidoPontoIdOrderByAssistidoNome(LocalDate dataDistribuicao, Long id);
 	
 }

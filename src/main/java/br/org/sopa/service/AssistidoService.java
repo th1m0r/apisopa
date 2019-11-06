@@ -59,10 +59,10 @@ public class AssistidoService {
 	}
 
 	public List<Frequencia> montarFrequencia(Long id) {
-		List<Frequencia> listaFrequencia = frequencias.findByDataDistribuicaoAndAssistidoPontoId(LocalDate.now(), id);
+		List<Frequencia> listaFrequencia = frequencias.findByDataDistribuicaoAndAssistidoPontoIdOrderByAssistidoNome(LocalDate.now(), id);
 		if (listaFrequencia.isEmpty()) {
 			listaFrequencia = new ArrayList<>();
-			for (Assistido pessoa : pessoas.findByPontoId(id)) {
+			for (Assistido pessoa : pessoas.findByPontoIdOrderByNome(id)) {
 				listaFrequencia.add(new Frequencia(pessoa));
 			}
 		}
