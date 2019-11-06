@@ -28,10 +28,10 @@ public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQu
 			+ "where vezes>=5", nativeQuery = true)
 	public Long countAptos();
 	
-	@Query("select count(a) from Assistido where situacao='C'")
+	@Query("select count(a) from Assistido a where situacao='C'")
 	public Long countCadastrados();
 	
-	@Query("select count(a) from Assistido where situacao='N'")
+	@Query("select count(a) from Assistido a where situacao='N'")
 	public Long countNaoCadastrados();
 
 }
