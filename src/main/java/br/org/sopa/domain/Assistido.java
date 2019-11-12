@@ -2,16 +2,20 @@ package br.org.sopa.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.validation.constraints.NotEmpty;
@@ -19,6 +23,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Assistido implements Serializable {
@@ -30,6 +35,7 @@ public class Assistido implements Serializable {
 	private Ponto ponto;
 	private LocalDate dataCadastro;
 	private StatusPessoa situacao;
+	private List<Frequencia> frequencias;
 
 	public Assistido() {
 		dataCadastro = LocalDate.now();
@@ -95,6 +101,16 @@ public class Assistido implements Serializable {
 
 	public void setSituacao(StatusPessoa situacao) {
 		this.situacao = situacao;
+	}
+
+	@JsonIgnore
+	@OneToMany(mappedBy = "assistido", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	public List<Frequencia> getFrequencias() {
+		return frequencias;
+	}
+
+	public void setFrequencias(List<Frequencia> frequencias) {
+		this.frequencias = frequencias;
 	}
 
 	@Override

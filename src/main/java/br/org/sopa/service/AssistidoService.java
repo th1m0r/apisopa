@@ -65,6 +65,10 @@ public class AssistidoService {
 			for (Assistido pessoa : pessoas.findByPontoIdOrderByNome(id)) {
 				listaFrequencia.add(new Frequencia(pessoa));
 			}
+		} else {
+			for (Assistido pessoa : pessoas.findAssistidoSemFrequencia(LocalDate.now(), id)) {
+				listaFrequencia.add(new Frequencia(pessoa));
+			}
 		}
 		return listaFrequencia;
 	}
@@ -76,6 +80,12 @@ public class AssistidoService {
 
 	public void salvarFrequencia(List<Frequencia> listaFrequencia) {
 		frequencias.saveAll(listaFrequencia);
+	}
+
+	public Assistido consultarFrequencia(Long idAssistido) {
+		Assistido retorno = pesquisar(idAssistido);
+		retorno.setFrequencias(frequencias.findByAssistido(retorno));
+		return retorno;
 	}
 
 }

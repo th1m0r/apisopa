@@ -1,5 +1,6 @@
 package br.org.sopa.repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -24,7 +25,7 @@ public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQu
 	public Long countAniversariantes(int monthValue);
 
 	@Query(value = "select count(*) from "
-			+ "(select id_assistido,count(*) as vezes from frequencia group by id_assistido) aptos "
+			+ "(select id_assistido,count(*) as vezes from frequencia where presente=1 group by id_assistido) aptos "
 			+ "where vezes>=5", nativeQuery = true)
 	public Long countAptos();
 	
@@ -33,5 +34,8 @@ public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQu
 	
 	@Query("select count(a) from Assistido a where situacao='N'")
 	public Long countNaoCadastrados();
+	
+	@Query("select a from Assistido a where not exists (select f from a.frequencias f where f.dataDistribuicao=?1) and a.ponto.id=?2")
+	public List<Assistido> findAssistidoSemFrequencia(LocalDate dataDistribuicao, Long id);
 
 }
