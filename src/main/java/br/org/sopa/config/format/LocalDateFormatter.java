@@ -16,7 +16,7 @@ public class LocalDateFormatter extends TemporalFormatter<LocalDate> {
 
 	@Override
 	public String pattern(Locale locale) {
-		return env.getProperty("localdate.format-" + locale, "dd/MM/yyyy");
+		return env.getProperty("localdate.format-" + locale, "yyyy-MM-dd");
 	}
 
 	@Override

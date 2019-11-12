@@ -58,16 +58,16 @@ public class AssistidoService {
 		pesquisar(pessoa.getId());
 	}
 
-	public List<Frequencia> montarFrequencia(Long id) {
-		List<Frequencia> listaFrequencia = frequencias.findByDataDistribuicaoAndAssistidoPontoIdOrderByAssistidoNome(LocalDate.now(), id);
+	public List<Frequencia> montarFrequencia(Long id, LocalDate dataDistribuicao) {
+		List<Frequencia> listaFrequencia = frequencias.findByDataDistribuicaoAndAssistidoPontoIdOrderByAssistidoNome(dataDistribuicao, id);
 		if (listaFrequencia.isEmpty()) {
 			listaFrequencia = new ArrayList<>();
 			for (Assistido pessoa : pessoas.findByPontoIdOrderByNome(id)) {
-				listaFrequencia.add(new Frequencia(pessoa));
+				listaFrequencia.add(new Frequencia(pessoa, dataDistribuicao));
 			}
 		} else {
-			for (Assistido pessoa : pessoas.findAssistidoSemFrequencia(LocalDate.now(), id)) {
-				listaFrequencia.add(new Frequencia(pessoa));
+			for (Assistido pessoa : pessoas.findAssistidoSemFrequencia(dataDistribuicao, id)) {
+				listaFrequencia.add(new Frequencia(pessoa, dataDistribuicao));
 			}
 		}
 		return listaFrequencia;

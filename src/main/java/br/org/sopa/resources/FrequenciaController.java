@@ -1,6 +1,7 @@
 package br.org.sopa.resources;
 
 import java.net.URI;
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,10 +38,12 @@ public class FrequenciaController {
 
 	@GetMapping
 	@ResponseStatus(value = HttpStatus.OK)
-	@RequestMapping(value = "/{idPonto}")
+	@RequestMapping(value = "/ponto/{idPonto}/dataDistribuicao/{dataDistribuicao}")
 	@CrossOrigin
-	public ResponseEntity<List<Frequencia>> montarFrequencia(@PathVariable("idPonto") Long idPonto) {
-		return ResponseEntity.ok().body(pessoaService.montarFrequencia(idPonto));
+	public ResponseEntity<List<Frequencia>> montarFrequencia(@PathVariable("idPonto") Long idPonto, 
+			@PathVariable("dataDistribuicao") LocalDate dataDistribuicao) {
+		System.out.println("data distribuicao: " + dataDistribuicao);
+		return ResponseEntity.ok().body(pessoaService.montarFrequencia(idPonto, dataDistribuicao));
 	}
 
 	@GetMapping

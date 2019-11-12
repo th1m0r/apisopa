@@ -33,9 +33,9 @@ public class Frequencia implements Serializable {
 	}
 
 
-	public Frequencia(Assistido assistido) {
+	public Frequencia(Assistido assistido, LocalDate dataDistribuicao) {
 		this.assistido = assistido;
-		dataDistribuicao = LocalDate.now();
+		this.dataDistribuicao = dataDistribuicao;
 		presente = false;
 	}
 
