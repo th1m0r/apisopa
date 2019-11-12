@@ -24,6 +24,14 @@ public class Frequencia implements Serializable {
 
 	public Frequencia() {
 	}
+	
+
+	public Frequencia(boolean presente, LocalDate dataDistribuicao) {
+		super();
+		this.presente = presente;
+		this.dataDistribuicao = dataDistribuicao;
+	}
+
 
 	public Frequencia(Assistido assistido) {
 		this.assistido = assistido;
@@ -32,7 +40,7 @@ public class Frequencia implements Serializable {
 	}
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	public Long getId() {
 		return id;
 	}

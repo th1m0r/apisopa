@@ -82,10 +82,8 @@ public class AssistidoService {
 		frequencias.saveAll(listaFrequencia);
 	}
 
-	public Assistido consultarFrequencia(Long idAssistido) {
-		Assistido retorno = pesquisar(idAssistido);
-		retorno.setFrequencias(frequencias.findByAssistido(retorno));
-		return retorno;
+	public List<Frequencia> consultarFrequencia(Long idAssistido) {
+		return frequencias.findByAssistidoId(idAssistido);
 	}
 
 }

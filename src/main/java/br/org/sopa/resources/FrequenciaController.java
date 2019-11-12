@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import br.org.sopa.domain.Assistido;
 import br.org.sopa.domain.Frequencia;
 import br.org.sopa.service.AssistidoService;
 
@@ -43,12 +42,12 @@ public class FrequenciaController {
 	public ResponseEntity<List<Frequencia>> montarFrequencia(@PathVariable("idPonto") Long idPonto) {
 		return ResponseEntity.ok().body(pessoaService.montarFrequencia(idPonto));
 	}
-	
+
 	@GetMapping
 	@ResponseStatus(value = HttpStatus.OK)
 	@RequestMapping(value = "/assistido/{idAssistido}")
 	@CrossOrigin
-	public ResponseEntity<Assistido> consultarFrequencia(@PathVariable("idAssistido") Long idAssistido) {
+	public ResponseEntity<List<Frequencia>> consultarFrequencia(@PathVariable("idAssistido") Long idAssistido) {
 		return ResponseEntity.ok().body(pessoaService.consultarFrequencia(idAssistido));
 	}
 
