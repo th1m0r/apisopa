@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import br.org.sopa.domain.Assistido;
+import br.org.sopa.repository.Assistidos;
 import br.org.sopa.repository.filter.AssistidoFiltro;
 import br.org.sopa.service.AssistidoService;
 
@@ -30,11 +31,20 @@ public class AssistidosController {
 
 	@Autowired
 	private AssistidoService assistidoService;
+	
+	@Autowired
+	private Assistidos assistidos;
 
 	@GetMapping
 	@CrossOrigin
 	public ResponseEntity<List<Assistido>> listar(AssistidoFiltro assistidoFiltro) {
 		return ResponseEntity.ok().body(assistidoService.listar(assistidoFiltro));
+	}
+	
+	@GetMapping("/aptos")
+	@CrossOrigin
+	public ResponseEntity<List<Assistido>> listarAptos() {
+		return ResponseEntity.ok().body(assistidos.findAptos());
 	}
 
 	@GetMapping(value = "/{id}")
@@ -57,6 +67,14 @@ public class AssistidosController {
 	public ResponseEntity<Void> alterar(@Valid Assistido assistido, @PathVariable("id") Long id) {
 		assistido.setId(id);
 		assistidoService.alterar(assistido);
+		return null;
+	}
+	
+	@PutMapping(value = "/cadastrar/{id}")
+	@ResponseStatus(value = HttpStatus.NO_CONTENT)
+	@CrossOrigin
+	public ResponseEntity<Void> efetuarCadastro(@PathVariable("id") Long id) {
+		assistidoService.cadastrar(id);
 		return null;
 	}
 

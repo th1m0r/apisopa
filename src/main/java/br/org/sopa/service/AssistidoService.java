@@ -86,4 +86,10 @@ public class AssistidoService {
 		return frequencias.findByAssistidoId(idAssistido);
 	}
 
+	public void cadastrar(Long id) {
+		Assistido assistido = pesquisar(id);
+		assistido.setSituacao(StatusPessoa.C);
+		salvar(assistido);
+	}
+
 }

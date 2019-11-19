@@ -24,17 +24,20 @@ public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQu
 	@Query("select count(a) from Assistido a where month(dataNascimento)=?1 and situacao='C'")
 	public Long countAniversariantes(int monthValue);
 
-	@Query(value = "select count(*) from "
-			+ "(select id_assistido,count(*) as vezes from frequencia where presente=1 group by id_assistido) aptos "
+	@Query(value = "select count(*) from " + "(select id_assistido,count(*) as vezes from frequencia f "
+			+ "inner join assistido a on f.id_assistido=a.id where presente=1 and a.situacao!='C' group by id_assistido) aptos "
 			+ "where vezes>=5", nativeQuery = true)
 	public Long countAptos();
-	
+
+	@Query(value = "select a from Assistido a where (select count(*) from a.frequencias f where f.presente=1 )>=5 and a.situacao!='C'")
+	public List<Assistido> findAptos();
+
 	@Query("select count(a) from Assistido a where situacao='C'")
 	public Long countCadastrados();
-	
+
 	@Query("select count(a) from Assistido a where situacao='N'")
 	public Long countNaoCadastrados();
-	
+
 	@Query("select a from Assistido a where not exists (select f from a.frequencias f where f.dataDistribuicao=?1) and a.ponto.id=?2")
 	public List<Assistido> findAssistidoSemFrequencia(LocalDate dataDistribuicao, Long id);
 
