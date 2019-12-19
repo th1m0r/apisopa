@@ -14,6 +14,7 @@ import br.org.sopa.domain.StatusPessoa;
 import br.org.sopa.repository.Assistidos;
 import br.org.sopa.repository.Frequencias;
 import br.org.sopa.repository.filter.AssistidoFiltro;
+import br.org.sopa.service.exception.EntidadeJaCadastradaException;
 import br.org.sopa.service.exception.RecursoNaoEncontradoException;
 
 @Service
@@ -38,6 +39,11 @@ public class AssistidoService {
 	}
 
 	public Assistido salvar(Assistido assistido) {
+		Optional<Assistido> assistidoOptinal = existe(assistido.getNome(), assistido.getDataNascimento());
+		if (assistidoOptinal.isPresent()) {
+			throw new EntidadeJaCadastradaException("Já existe um assistido cadastrado com esse nome e data de nascimento");
+		}
+		
 		if (assistido.getSituacao() == null) {
 			assistido.setSituacao(StatusPessoa.N);
 		}
@@ -90,6 +96,10 @@ public class AssistidoService {
 		Assistido assistido = pesquisar(id);
 		assistido.setSituacao(StatusPessoa.C);
 		salvar(assistido);
+	}
+
+	private Optional<Assistido> existe(String nome, LocalDate dataNascimento) {
+		return pessoas.findByNomeAndDataNascimento(nome, dataNascimento);
 	}
 
 }

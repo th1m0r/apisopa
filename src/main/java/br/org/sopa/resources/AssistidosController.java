@@ -31,7 +31,7 @@ public class AssistidosController {
 
 	@Autowired
 	private AssistidoService assistidoService;
-	
+
 	@Autowired
 	private Assistidos assistidos;
 
@@ -40,7 +40,7 @@ public class AssistidosController {
 	public ResponseEntity<List<Assistido>> listar(AssistidoFiltro assistidoFiltro) {
 		return ResponseEntity.ok().body(assistidoService.listar(assistidoFiltro));
 	}
-	
+
 	@GetMapping("/aptos")
 	@CrossOrigin
 	public ResponseEntity<List<Assistido>> listarAptos() {
@@ -64,12 +64,12 @@ public class AssistidosController {
 	@PutMapping(value = "/{id}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	@CrossOrigin
-	public ResponseEntity<Void> alterar(@Valid Assistido assistido, @PathVariable("id") Long id) {
+	public ResponseEntity<Void> alterar(@Valid @RequestBody Assistido assistido, @PathVariable("id") Long id) {
 		assistido.setId(id);
 		assistidoService.alterar(assistido);
-		return null;
+		return ResponseEntity.noContent().build();
 	}
-	
+
 	@PutMapping(value = "/cadastrar/{id}")
 	@ResponseStatus(value = HttpStatus.NO_CONTENT)
 	@CrossOrigin

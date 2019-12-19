@@ -2,6 +2,7 @@ package br.org.sopa.repository;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -40,5 +41,7 @@ public interface Assistidos extends JpaRepository<Assistido, Long>, AssistidosQu
 
 	@Query("select a from Assistido a where not exists (select f from a.frequencias f where f.dataDistribuicao=?1) and a.ponto.id=?2")
 	public List<Assistido> findAssistidoSemFrequencia(LocalDate dataDistribuicao, Long id);
+
+	public Optional<Assistido> findByNomeAndDataNascimento(String nome, LocalDate dataNascimento);
 
 }

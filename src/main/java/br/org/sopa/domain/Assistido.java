@@ -18,6 +18,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -66,6 +67,7 @@ public class Assistido implements Serializable {
 		this.nome = nome;
 	}
 
+	@NotNull(message = "A data de nascimento é obrigatória")
 	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
