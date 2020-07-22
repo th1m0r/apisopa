@@ -5,3 +5,5 @@
 /bin/
 *.gz
 *.log
+application.properties
+
